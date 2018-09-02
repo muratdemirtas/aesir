@@ -16,7 +16,7 @@ class Syslogger:
 
     def writesyslogFile(self, message):
 
-        if self.openstatus == True:
+        if self.openstatus:
             syslog.syslog(message)
         else:
             self.openSyslogFile()
